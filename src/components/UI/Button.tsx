@@ -5,6 +5,7 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 export function ButtonPrimary({ children, ...props }: Props) {
     return (
         <button
+        type="button"
             className="bg-indigo-500 px-4 py-2 rounded-md text-white"
             {...props}>
             {children}

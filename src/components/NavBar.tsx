@@ -21,8 +21,8 @@ const NavBar = () => {
     const handleLogout = () => {
         sessionStorage.setItem('token', '');
         // Actualizar el estado local o redirigir a la página de inicio de sesión sin recargar la página.
+        window.location.href = '/';
         setIsLoggedIn(false);
-        // Otra lógica necesaria...
     };
 
     useEffect(() => {
@@ -59,11 +59,11 @@ const NavBar = () => {
             <nav className="flex gap-5 items-center justify-center">
                 <ul className="flex flex-col items-center justify-center gap-1 sm:gap-5 m-5 sm:flex-row">
 
-                    <Link to='/agendar_cita' className={pathname == '/agendar_cita' ? 'item-selected list-item' : 'list-item'}>Agendar cita</Link>
-                    <Link to='/historial_medico' className={pathname == '/historial_medico' ? 'item-selected list-item' : 'list-item'}>Historial médico</Link>
 
                     {isLoggedIn ? (
                         <>
+                        <Link to='/agendar_cita' className={pathname == '/agendar_cita' ? 'item-selected list-item' : 'list-item'}>Agendar cita</Link>
+                        <Link to='/historial_medico' className={pathname == '/historial_medico' ? 'item-selected list-item' : 'list-item'}>Historial médico</Link>
                         <span>{user?.nombre}</span>
                             <ButtonNav
                                 onClick={handleLogout}
