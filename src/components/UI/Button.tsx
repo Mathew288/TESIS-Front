@@ -2,11 +2,12 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 }
 
-export function ButtonPrimary({ children, ...props }: Props) {
+export function ButtonPrimary({ children, onClick,...props }: Props) {
     return (
         <button
         type="button"
             className="bg-indigo-500 px-4 py-2 rounded-md text-white"
+            onClick={onClick}
             {...props}>
             {children}
         </button>

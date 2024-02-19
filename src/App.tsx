@@ -8,6 +8,7 @@ import CitaPage from './components/Pages/AgendarCita/CitaPage'
 import ProtectedRoutes from './components/utils/ProtectedRoutes'
 import { useEffect, useState } from 'react'
 import validateToken from './components/handlers/ValidateToken'
+import { UserProvider } from './context/UserPrivider'
 
 function App() {
 
@@ -31,7 +32,8 @@ function App() {
   }, [token, isLoggedIn]);
 
   return (
-    <>
+    <UserProvider>
+      
       <NavBar></NavBar>
       <Routes>
         <Route path='/' element={<Home />} />
@@ -45,7 +47,7 @@ function App() {
 
       </Routes>
       <Footer />
-    </>
+    </UserProvider>
 
 
   )

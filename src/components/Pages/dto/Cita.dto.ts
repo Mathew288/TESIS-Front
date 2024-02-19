@@ -1,10 +1,11 @@
 
 export interface CitaDTO {
   id?: number;
-  fecha: Date;
-  hora: string;
+  fecha: string;
+  hora: number;
   pacienteId?: number;
   motivo: string;
+  minutos?:number;
   sintomas?: string;
 }
 
