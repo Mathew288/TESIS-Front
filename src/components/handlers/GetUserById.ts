@@ -1,6 +1,6 @@
 import axios from "axios";
 import { Usuario } from "../dto/UserDto";
-import { baseUrl } from "../../BaseURL";
+import { baseUrl } from "../../constants/BaseURL";
 import {  jwtDecode } from "jwt-decode";
 import { CustomJwtPayload } from "../dto/Payload";
 

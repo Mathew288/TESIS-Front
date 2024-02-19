@@ -55,7 +55,7 @@ const NavBar = () => {
                             </Link>
                             <Link to='/historial_medico' className={pathname == '/historial_medico' ? 'item-selected list-item' : 'list-item'}>
                                 <ArticleIcon className="mr-2"/>
-                                Historial médico
+                                Mi historial médico
                             </Link>
 
                             <div className="flex">
